@@ -1,5 +1,5 @@
 " PythonTidy
-map <leader>t :%!pythontidy<CR>
+map <leader>t :%!pythontidy -c ~/.pythontidyrc<CR>
 
 " PyLint
 map <leader>p :PyLint<CR>
@@ -86,8 +86,8 @@ set pastetoggle=<F3>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " grep search word under cursor
-nmap <leader>g :Grep -nRI <cword> .<CR>
-command -nargs=1 RGrep :Grep -nRI <args> .
+"nmap <leader>g :Grep -nRI <cword> .<CR>
+"command -nargs=1 RGrep :Grep -nRI <args> .
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " toggle Highlight
@@ -153,8 +153,8 @@ endfunction
 
 nmap <silent> <leader>l :call ToggleList("Location List", 'l')<CR>
 nmap <silent> <leader>e :call ToggleList("Quickfix List", 'c')<CR>
-command -bang -nargs=? LocL call ToggleList("Location List", 'l')
-command -bang -nargs=? QFix call ToggleList("Quickfix List", 'c')
+command! -bang -nargs=? LocL call ToggleList("Location List", 'l')
+command! -bang -nargs=? QFix call ToggleList("Quickfix List", 'c')
 nmap <silent> \ß :LocL<CR>
 nmap <silent> \q :QFix<CR>
 
@@ -284,7 +284,7 @@ imap <khome> <home>
 nmap <khome> <home>
 inoremap <silent> <home> <C-O>:call Home()<return>
 nnoremap <silent> <home> :call Home()<return>
-function Home()
+function! Home()
     let curcol = wincol()
     normal ^
     if wincol() == curcol
