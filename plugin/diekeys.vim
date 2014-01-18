@@ -1,12 +1,5 @@
 " PythonTidy
-map <leader>t :%!pythontidy -c ~/.pythontidyrc<CR>
-
-" PyLint
-map <leader>p :PyLint<CR>
-
-" ctrlp buffers
-map  <leader>b * :<C-U>CtrlPBuffer<CR>
-
+map <leader>t :%!pythontidy -c ~/.pythontidyrc<CR>   
 
 " Ctrl + A    Go to the beginning of the line you are currently typing on
 imap <C-A> <home>
@@ -157,14 +150,6 @@ command! -bang -nargs=? LocL call ToggleList("Location List", 'l')
 command! -bang -nargs=? QFix call ToggleList("Quickfix List", 'c')
 nmap <silent> \ß :LocL<CR>
 nmap <silent> \q :QFix<CR>
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" nerdtree
-"map <leader>n :NERDTreeToggle \| :silent NERDTreeMirror<CR>
-map  :NERDTreeToggle \| :silent NERDTreeMirror<CR>
-map <F5> :NERDTreeToggle \| :silent NERDTreeMirror<CR>
-"imap  :NERDTreeToggle \| :silent NERDTreeMirror<CR>
-"map  :NERDTreeToggle \| :silent NERDTreeMirror<CR>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
