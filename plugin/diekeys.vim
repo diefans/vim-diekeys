@@ -101,7 +101,7 @@ nnoremap <leader>_^ yyp<c-v>$r^
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " buffers
 map <F1> :ls<CR>
-map <leader>\ :b #<CR>
+map <leader># :b #<CR>
 map <leader>1 :b 1<CR>
 map <leader>2 :b 2<CR>
 map <leader>3 :b 3<CR>
